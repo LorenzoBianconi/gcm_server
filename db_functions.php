@@ -39,7 +39,7 @@ class DB_Functions {
      * remove user from db
      */
     public function deleteUser($gcm_regid) {
-        $result = mysql_query("DELETE FROM gcm_users where gcm_regid = $gcm_regid");
+        $result = mysql_query("DELETE FROM gcm_users where gcm_regid = '$gcm_regid'");
 
 	return $result;
     }
